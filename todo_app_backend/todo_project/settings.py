@@ -131,10 +131,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # React Development Server
-    "http://your-frontend-domain.com",  # Deployed Frontend
+    "https://todo-app-lemon-tau.vercel.app",  # Deployed Frontend
+    "https://127.0.0.1",
 ]
 
+DEBUG = False
 
-ALLOWED_HOSTS = ['your-vercel-domain.vercel.app']
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
