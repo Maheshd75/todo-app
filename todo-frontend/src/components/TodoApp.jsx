@@ -9,7 +9,7 @@ const TodoApp = () => {
 
     // Fetch all todos
     useEffect(() => {
-        axios.get("http://127.0.0.1:8000")
+        axios.get("https://todo-app-eyn4.onrender.com/api/todos/")
             .then((response) => setTodos(response.data))
             .catch((error) => console.error(error));
     }, []);
@@ -17,7 +17,7 @@ const TodoApp = () => {
     // Add a new To-Do
     const addTodo = () => {
         if (newTodo.trim() === "") return;
-        axios.post("http://127.0.0.1:8000", { title: newTodo, completed: false })
+        axios.post("https://todo-app-eyn4.onrender.com/api/todos/", { title: newTodo, completed: false })
             .then((response) => setTodos([...todos, response.data]))
             .catch((error) => console.error(error));
         setNewTodo("");
