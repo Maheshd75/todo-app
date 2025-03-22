@@ -130,5 +130,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 DEBUG = True
 CORS_ALLOW_ALL_ORIGINS = True
-ALLOWED_HOSTS = ["todo-app-eyn4.onrender.com", "127.0.0.1"]
+CORS_ALLOWED_ORIGINS = [
+    "https://todo-app-sooty-seven-98.vercel.app/",
+      # For local development
+]
+ALLOWED_HOSTS = ["todo-app-sooty-seven-98.vercel.app",]
 
