@@ -128,12 +128,12 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-DEBUG = False
+DEBUG = True
 CORS_ALLOW_ALL_ORIGINS = True
 
 #CORS_ALLOWED_ORIGINS = [""
    # "https://todo-app-sooty-seven-98.vercel.app",
       # For local development
 #]
-ALLOWED_HOSTS = ["todo-app-sooty-seven-98.vercel.app",]
+#ALLOWED_HOSTS = ["todo-app-sooty-seven-98.vercel.app",]
 
