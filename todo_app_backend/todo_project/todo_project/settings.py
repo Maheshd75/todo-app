@@ -132,4 +132,4 @@ CORS_ALLOWED_ORIGINS = [
     "127.0.0.1",
 ]
 DEBUG = False
-ALLOWED_HOSTS = ["https://todo-app-sooty-seven-98.vercel.app"]
+ALLOWED_HOSTS = ["https://todo-app-sooty-seven-98.vercel.app","127.0.0.1"]
