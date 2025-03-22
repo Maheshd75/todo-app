@@ -127,9 +127,7 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-CORS_ALLOWED_ORIGINS = [
-    "https://todo-app-sooty-seven-98.vercel.app",  # Your React app's URL
-    "127.0.0.1",
-]
+
 DEBUG = False
-ALLOWED_HOSTS = ["https://todo-app-sooty-seven-98.vercel.app","127.0.0.1"]
+CORS_ALLOW_ALL_ORIGINS = True
+
