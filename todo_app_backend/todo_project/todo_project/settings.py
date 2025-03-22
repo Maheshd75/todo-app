@@ -125,7 +125,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-ALLOWED_HOSTS = ["https://todo-app-lemon-tau.vercel.app","127.0.0.1"]
+ALLOWED_HOSTS = ["https://todo-app-sooty-seven-98.vercel.app/","127.0.0.1"]
 
 # Ensure static files are properly configured
 STATIC_URL = '/static/'
@@ -134,6 +134,6 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOWED_ORIGINS = [
-    "https://todo-app-lemon-tau.vercel.app",
+    "https://todo-app-sooty-seven-98.vercel.app/",
 ]
 
