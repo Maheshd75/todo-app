@@ -9,7 +9,7 @@ const TodoApp = () => {
 
     // Fetch all todos
     useEffect(() => {
-        axios.get("https://todo-app-eyn4.onrender.com/")
+        axios.get("https://todo-app-eyn4.onrender.com")
             .then((response) => setTodos(response.data))
             .catch((error) => console.error(error));
     }, []);
@@ -17,7 +17,7 @@ const TodoApp = () => {
     // Add a new To-Do
     const addTodo = () => {
         if (newTodo.trim() === "") return;
-        axios.post("https://todo-app-eyn4.onrender.com/", { title: newTodo, completed: false })
+        axios.post("https://todo-app-eyn4.onrender.com", { title: newTodo, completed: false })
             .then((response) => setTodos([...todos, response.data]))
             .catch((error) => console.error(error));
         setNewTodo("");
