@@ -9,7 +9,7 @@ const TodoApp = () => {
 
     // Fetch all todos
     useEffect(() => {
-        axios.get("http://127.0.0.1:8000/api/todos/")
+        axios.get("https://todo-app-eyn4.onrender.com/")
             .then((response) => setTodos(response.data))
             .catch((error) => console.error(error));
     }, []);
@@ -17,7 +17,7 @@ const TodoApp = () => {
     // Add a new To-Do
     const addTodo = () => {
         if (newTodo.trim() === "") return;
-        axios.post("http://127.0.0.1:8000/api/todos/", { title: newTodo, completed: false })
+        axios.post("https://todo-app-eyn4.onrender.com/", { title: newTodo, completed: false })
             .then((response) => setTodos([...todos, response.data]))
             .catch((error) => console.error(error));
         setNewTodo("");
@@ -26,7 +26,7 @@ const TodoApp = () => {
     // Edit an existing To-Do
     const editTodo = (id) => {
         if (editedTitle.trim() === "") return;
-        axios.put(`http://127.0.0.1:8000/api/todos/${id}/`, { title: editedTitle, completed: false })
+        axios.put(`https://todo-app-eyn4.onrender.com/api/todos/${id}/`, { title: editedTitle, completed: false })
             .then((response) => {
                 setTodos(todos.map((todo) => (todo.id === id ? response.data : todo)));
                 setEditingTodo(null); // Exit editing mode
@@ -37,7 +37,7 @@ const TodoApp = () => {
 
     // Delete a To-Do
     const deleteTodo = (id) => {
-        axios.delete(`http://127.0.0.1:8000/api/todos/${id}/`)
+        axios.delete(`https://todo-app-eyn4.onrender.com/api/todos/${id}/`)
             .then(() => setTodos(todos.filter((todo) => todo.id !== id)))
             .catch((error) => console.error(error));
     };
@@ -45,7 +45,7 @@ const TodoApp = () => {
     // Toggle Completion Status
     const toggleCompletion = (id) => {
         const todo = todos.find((todo) => todo.id === id);
-        axios.put(`http://127.0.0.1:8000/api/todos/${id}/`, { ...todo, completed: !todo.completed })
+        axios.put(`https://todo-app-eyn4.onrender.com/api/todos/${id}/`, { ...todo, completed: !todo.completed })
             .then((response) => setTodos(todos.map((todo) => (todo.id === id ? response.data : todo))))
             .catch((error) => console.error(error));
     };
