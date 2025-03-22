@@ -135,5 +135,5 @@ CORS_ALLOW_ALL_ORIGINS = True
    # "https://todo-app-sooty-seven-98.vercel.app",
       # For local development
 #]
-ALLOWED_HOSTS = ["todo-app-sooty-seven-98.vercel.app"]
+ALLOWED_HOSTS = ["todo-app-sooty-seven-98.vercel.app","todo-app-eyn4.onrender.com"]
 
